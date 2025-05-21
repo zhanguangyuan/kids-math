@@ -1,0 +1,12 @@
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
+
+Allow: /files/
+Allow: /css/
+Allow: /js/
+
+LLM-Content: https://www.math-exercis.cn/llms.txt
+LLM-Full-Content: https://www.math-exercis.cn/llms-full.txt
