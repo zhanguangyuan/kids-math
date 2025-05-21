@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>Kids math writing by Math Exercises=Printable and Download for Free</title>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="canonical" href="../files/math.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="../icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icon.png">
+
+  <meta name="description" content="Collection of math exercises and math problems. Primary school, high school and college math problems and math exercises with correct answers.">
+
+  <meta name="keywords" content="kids math, math tasks， kids writing, math worksheets,student drills, math worksheets, math drills,
+  students, teachers, parents, math Exercises, writing worksheets pdf free download">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/grid_12.css">
+
+  <script src="../js/vue.min.js"></script>
+  <script src="../js/bmob-min.js"></script>
+
+  <script src="../js/jspdf.debug.js"></script>
+  <script src="../js/html2canvas2.js"></script>
+  <script src="../js/pdf.js"></script>
+
+  <script src="../js/jquery-1.7.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+</head>
+
+<body>
+<div class="main">
+  <!--==============================header=================================-->
+  <header>
+    <h1 style="display: none"><a href="../index.html"><img src="../images/logo.png" alt="Build foundational skills and conceptual knowledge with this enormous collection of printable math worksheets drafted for students of elementary school, middle school and high school. Aligned with the CCSS, the practice worksheets cover all the key math topics like number sense, measurement, statistics, geometry, pre-algebra and algebra. Packed here are workbooks for grades k-8, teaching resources and high school worksheets with accurate answer keys and free sample printables."></a></h1>
+    <div style="display: none" class="form-search">
+      <form id="form-search" method="post">
+        <input style="align-items: center" type="text" value="Type here..." onBlur="if(this.value=='') this.value='Type here...'"  onFocus="if(this.value =='Type here...' ) this.value=''"/>
+        <a href="#" onClick="document.getElementById('form-search').submit()" class="search_button"></a>
+      </form>
+    </div>
+
+    <nav class="box-shadow">
+      <div>
+        <ul class="menu">
+          <li class="home-page"><a href="../index.html"><span></span></a></li>
+          <li class="current"><a href="../files/math.html">Math Worksheets</a></li>
+          <li><a href="../files/exercises.html">Exercises Online</a></li>
+          <li><a href="../files/games.html">Math Games</a></li>
+          <li><a href="../files/about.html">Parent Math</a></li>
+
+                  </ul>
+                  <div class="social-icons">
+                    <span>Follow us:</span>
+                    <a href="#" class="icon-3"></a>
+                    <a href="#" class="icon-2"></a>
+                    <a href="#" class="icon-1"></a>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </nav>
+            </header>
+
+<!--==============================content================================-->
+  <div id="app" class="container">
+    <div class="noprint">
+      <!------------------- Dialog Modal --------------------------------------------->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Detailed Settings</h4>
+            </div>
+
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Quick Settings</label>
+                  <div class="input-group col-sm-8">
+                    <select name="level" class="form-control" disabled>
+                      <option value="">【Quick Topic Selection（Disable）】</option>
+                      <option value="20">20 以内整数加减法</option>
+                      <option value="100n">100 以内加减法不进/借位</option>
+                      <option value="100+1">100 以内进位加法(1 位数)</option>
+                      <option value="100+2">100 以内进位加法(2 位数)</option>
+                      <option value="100-1">100 以内借位减法(1 位数)</option>
+                      <option value="100-2">100 以内借位减法(2 位数)</option>
+                      <option value="100+-">100 以内连加连减</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Contains Types</label>
+                  <div class="input-group col-sm-8">
+                    <div class="btn-group" data-toggle="buttons">
+                      <label v-bind:class="{ active: isadd, 'btn-danger': isadd, 'btn-default': !isadd}"
+                             class="btn" v-on:click="isadd=!isadd"><span v-bind:class="{ 'glyphicon-ok': isadd, 'glyphicon-unchecked': ! isadd }" class="glyphicon" aria-hidden="true"></span>
+                        <input type="checkbox" autocomplete="off" v-model="isadd"> ＋Addition
+                      </label>
+
+                      <label v-bind:class="{ active: issub, 'btn-warning': issub, 'btn-default': !issub }"
+                             class="btn" v-on:click="issub=!issub"><span v-bind:class="{ 'glyphicon-ok': issub, 'glyphicon-unchecked': ! issub }" class="glyphicon" aria-hidden="true"></span>
+                        <input type="checkbox" autocomplete="off" v-model="issub"> －Subtraction
+                      </label>
+
+                      <label v-bind:class="{ active: ismul, 'btn-primary': ismul, 'btn-default': !ismul }"
+                             class="btn" v-on:click="ismul=!ismul"><span v-bind:class="{ 'glyphicon-ok': ismul, 'glyphicon-unchecked': ! ismul }" class="glyphicon" aria-hidden="true"></span>
+                        <input type="checkbox" autocomplete="off" v-model="ismul"> &times;Multiplication
+                      </label>
+
+                      <label v-bind:class="{ active: isdiv, 'btn-success': isdiv, 'btn-default': !isdiv }"
+                             class="btn" v-on:click="isdiv=!isdiv"><span v-bind:class="{ 'glyphicon-ok': isdiv, 'glyphicon-unchecked': ! isdiv }" class="glyphicon" aria-hidden="true"></span>
+                        <input type="checkbox" autocomplete="off" v-model="isdiv"> &div;Division
+                      </label>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Operate Quantity</label>
+                  <div class="input-group col-sm-8 ">
+                    <input type="number" class="form-control" v-model="itemcount"/>
+                    <div class="input-group-addon">Calculate Target</div>
+                    <select name="rule" class="form-control col-sm-2 " v-model="rule">
+                      <option value="1">Sum</option>
+                      <option value="2">Operation Items</option>
+                    </select>
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></div>
+                    <select :disabled="'2'!=rule" class="form-control" v-model="whichcond">
+                      <option value="">Random</option>
+                      <template v-for="(rg, i) in Array(itemcount)">
+                        <option :value="i">Operation # {{i + 1}}</option>
+                      </template>
+                    </select>
+                  </div>
+                </div>
+                <hr style="margin:8px"/>
+                <!---------------标签----------------------->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="active">
+                    <a href="#tab-op" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>Symbol Settings</a>
+                  </li>
+
+                  <li v-if="isadd">
+                    <a href="#tab-add" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Additive Settings</a>
+                  </li>
+                  <li v-if="issub">
+                    <a href="#tab-sub" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Subtractive Settings</a>
+                  </li>
+                  <li v-if="ismul">
+                    <a href="#tab-mul" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Multiplication Settings</a>
+                  </li>
+                  <li v-if="isdiv">
+                    <a href="#tab-div" role="tab" data-toggle="tab">
+                      <span class="glyphicon " aria-hidden="true" style="font-size: 25px;font-weight: bold;line-height: 0;">&div;</span>Division Settings</a>
+                  </li>
+                </ul>
+                <!-----------------标签的内容----------------------->
+                <div class="tab-content" style="padding:10px;">
+
+                  <div class="tab-pane active" id="tab-op">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div v-if="isadd||issub||ismul||isdiv" class="form-group" v-for="(rg, i) in range_op">
+                          <label class="col-sm-3 control-label">Operator # {{i + 1}} Settings</label>
+                          <div class="input-group col-sm-7">
+                            <div class="btn-group" data-toggle="buttons">
+                              <label v-if="isadd" class="btn " :class="{'btn-default':!rg.add, 'btn-info':rg.add, active: rg.add}" v-on:click="rg.add=!rg.add">
+                                <span class="glyphicon" :class="{'glyphicon-unchecked':!rg.add, 'glyphicon-check': rg.add}" aria-hidden="true"></span>
+                                <input type="checkbox" v-mode="rg.add" autocomplete="off"> ＋
+                              </label>
+                              <label v-if="issub" class="btn " :class="{'btn-default':!rg.sub, 'btn-info':rg.sub, active: rg.sub}" v-on:click="rg.sub=!rg.sub">
+                                <span class="glyphicon" :class="{'glyphicon-unchecked':!rg.sub, 'glyphicon-check': rg.sub}" aria-hidden="true"></span>
+                                <input type="checkbox" v-model="rg.sub" autocomplete="off"> －
+                              </label>
+                              <label v-if="ismul" class="btn " :class="{'btn-default':!rg.mul, 'btn-info':rg.mul, active: rg.mul}" v-on:click="rg.mul=!rg.mul">
+                                <span class="glyphicon" :class="{'glyphicon-unchecked':!rg.mul, 'glyphicon-check': rg.mul}" aria-hidden="true"></span>
+                                <input type="checkbox" autocomplete="off"> &times;
+                              </label>
+                              <label v-if="isdiv" class="btn " :class="{'btn-default':!rg.div, 'btn-info':rg.div, active: rg.div}" v-on:click="rg.div=!rg.div">
+                                <span class="glyphicon" :class="{'glyphicon-unchecked':!rg.div, 'glyphicon-check': rg.div}" aria-hidden="true"></span>
+                                <input type="checkbox" autocomplete="off"> &div;
+                              </label>
+                              <label class="btn btn-default" :class="{active: rg.all}" v-on:click="rg.add=rg.sub=rg.mul=rg.div=rg.all=!rg.all">
+                                <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+                                <input type="checkbox" autocomplete="off"> All
+                              </label>
+                              <label v-if="itemcount>2 && exact_parentheses" class="btn" :class="{'btn-default':!rg.parentheses, 'btn-info':rg.parentheses, active: rg.parentheses}" v-on:click="rg.parentheses=!rg.parentheses">
+                                <span class="glyphicon" :class="{'glyphicon-unchecked':!rg.parentheses, 'glyphicon-check': rg.parentheses}" aria-hidden="true"></span>
+                                <input type="checkbox" autocomplete="off"> （Brackets）
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label"></label>
+                          <div class="input-group col-sm-4">
+                            <div class="checkbox form-control">
+                              <label>
+                                <input type="checkbox" v-model="diff_operator_adjacent"/>&nbsp;  All Different
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label"></label>
+                          <div class="input-group col-sm-4">
+                            <div class="checkbox form-control">
+                              <label>
+                                <input type="checkbox" v-model="dissimilarity_operator_adjacent"/>&nbsp; All not Adjacent
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label">Generate Settings</label>
+                          <div class="input-group col-sm-4">
+                            <select class="form-control" v-model="strategy">
+                              <option value="random" selected>Randomly Decide to Generate</option>
+                              <option value="lft">First Left then Right</option>
+                              <option value="rgt">First Right then Left</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label"></label>
+                          <div class="input-group col-sm-4">
+                            <div class="checkbox form-control">
+                              <label>
+                                <input type="checkbox" v-model="parentheses.autofix"/>&nbsp; Make Sure the Brackets to Sense
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!--
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">生成的括号对数：</label>
+                            <div class="input-group col-sm-5">
+                                <div class="input-group-addon ">至少</div>
+                                <input :disabled="!parentheses.enabled" type="number" class="form-control" v-model="parentheses.min"  title="最小值" />
+                                <div class="input-group-addon">对</div>
+                                <div class="input-group-addon">最多</div>
+                                <input :disabled="!parentheses.enabled" type="number" class="form-control" v-model="parentheses.max" title="最大值" />
+                                <div class="input-group-addon">对</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"></label>
+                            <div class="input-group col-sm-4">
+                                <div class="checkbox form-control">
+                                    <label>
+                                        <input type="checkbox" v-model="exact_parentheses"/> 精确指定括号生成位置
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="tab-add" v-if="isadd">
+                    <div class="form-group" v-for="(rg, i) in range_add">
+                      <label class="col-sm-3 control-label">Operation #{{i + 1}} Rang</label>
+                      <div class="input-group col-sm-4">
+                        <input type="number" class="form-control" v-model="rg.min" title="Min Value"/>
+                        <div class="input-group-addon">-</div>
+                        <input type="number" class="form-control" v-model="rg.max" title="Max Value"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Result Range</label>
+                      <div class="input-group col-sm-4">
+                        <input type="number" class="form-control" v-model="result_add.min" title="Min Value"/>
+                        <div class="input-group-addon">-</div>
+                        <input type="number" class="form-control" v-model="result_add.max" title="Max Value"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Carry Setting</label>
+                      <div class="input-group col-sm-4">
+                        <select name="carry" class="form-control" v-model="carry">
+                          <option value="random" selected>Randomly Decide to Generate</option>
+                          <option value="no">No Remainder</option>
+                          <option value="all">Has Remainder</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="tab-sub" v-if="issub">
+                    <div class="form-group" v-for="(rg, i) in range_sub">
+                      <label class="col-sm-3 control-label">Operation #{{i + 1}} Rang</label>
+                      <div class="input-group col-sm-4">
+                        <input type="number" class="form-control" v-model="rg.min" title="Min Value"/>
+                        <div class="input-group-addon">-</div>
+                        <input type="number" class="form-control" v-model="rg.max" title="Max Value"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Result Range</label>
+                      <div class="input-group col-sm-4">
+                        <input type="number" class="form-control" v-model="result_sub.min" title="Min Value"/>
+                        <div class="input-group-addon">-</div>
+                        <input type="number" class="form-control" v-model="result_sub.max" title="ax Value"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Carry Setting</label>
+                      <div class="input-group col-sm-4">
+                        <select name="borrow" class="form-control" v-model="borrow">
+                          <option value="random" selected>Randomly Decide to Generate</option>
+                          <option value="no">No Remainder</option>
+                          <option value="all">Has Remainder</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="tab-mul" v-if="ismul">
+                    <div class="form-group" v-for="(rg, i) in range_mul">
+                      <label class="col-sm-3 control-label">Operation #{{i + 1}}Rang</label>
+                      <div class="input-group col-sm-4">
+                        <input type="number" class="form-control" v-model="rg.min" title="Min Value"/>
+                        <div class="input-group-addon">-</div>
+                        <input type="number" class="form-control" v-model="rg.max" title="Max Value"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Result Range</label>
+                      <div class="input-group col-sm-4">
+                        <input type="number" class="form-control" v-model="result_mul.min" title="Min Value"/>
+                        <div class="input-group-addon">-</div>
+                        <input type="number" class="form-control" v-model="result_mul.max" title="Max Value"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="tab-div" v-if="isdiv">
+                    <div class="form-group" v-for="(rg, i) in range_div">
+                      <label class="col-sm-3 control-label">Operation # {{i + 1}}Rang</label>
+                      <div class="input-group col-sm-4">
+                        <input type="number" class="form-control" v-model="rg.min" title="Min Value"/>
+                        <div class="input-group-addon">-</div>
+                        <input type="number" class="form-control" v-model="rg.max" title="Max Value"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Division Range</label>
+                      <div class="input-group col-sm-4">
+                        <input type="number" class="form-control" v-model="result_div.min" title="Min Value"/>
+                        <div class="input-group-addon">-</div>
+                        <input type="number" class="form-control" v-model="result_div.max" title="Max Value"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Integer Remainder</label>
+                      <div class="input-group col-sm-4">
+                        <select name="nomod" class="form-control" v-model="nomod">
+                          <option value="random" selected>Randomly Decide</option>
+                          <option value="yes">No Remainder</option>
+                          <option value="all">Has Remainder</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--------------------  Content Begin ------------------------------------->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <b style="tab-size: 24px">Free Math Worksheets</b>
+            </div>
+
+            <div class="panel-body">
+              <form class="form-inline">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Quantity</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="count" v-model="count"/>
+                        <div class="input-group-addon"></div>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" style="float:right">
+                          <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;&nbsp;Settings</button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label>Columns</label>
+                      <div class="input-group">
+                        <input style="width: 60px" type="number" class="form-control" name="cols" v-model="cols"/>
+                        <div class="input-group-addon">Columns</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4" style="margin-left: 20px">
+                    <div class="form-group">
+                      <label class="">Rows</label>
+                      <div class="input-group">
+                        <input type="number" style="width: 60px" class="form-control" name="count" v-model="pagerows"/>
+                        <span class="input-group-addon">(Only for IE) All {{parseInt((res.length + (cols - 0) - 1) / (cols - 0))}} Rows / {{parseInt(((parseInt(res.length + (cols - 0) - 1) / (cols - 0)) +  (pagerows -  1)) / (pagerows - 0))}} Pages </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row" style="height:20px"></div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="">Space & Gap Control</label>
+                      <div class="input-group">
+                        <div class="input-group-addon">Space</div><input type="number" class="form-control" v-model="cellPadding"/>
+                        <div class="input-group-addon">Gap</div><input type="number" class="form-control" v-model="cellSpacing"/>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-5">
+                    <div class="form-group">
+                      <label class="">Fonts Settings</label>
+                      <div class="input-group">
+                        <select v-model="fontfamily" class="form-control">
+                          <option value="Georgia">Georgia</option>
+                          <option value="Helvetica">Helvetica</option>
+                          <option value="Tahoma" selected>Tahoma</option>
+                          <option value="宋体">宋体</option>
+                          <option value="楷体">楷体</option>
+                          <option value="微软雅黑">微软雅黑</option>
+                        </select>
+                        <div class="input-group-addon">Size</div>
+                        <input type="number" class="form-control" v-model="fontsize"/>
+                        <div class="input-group-addon">PX</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="panel-footer" role="alert">
+                            <span class="hidden">
+                                <input type="text" v-if="!is_login" placeholder="用户名" v-model="username"/>
+                                <input type="password" v-if="!is_login" placeholder="密码" v-model="password"/>
+                                <button @click="login" v-if="!is_login">登录</button>
+                                <button @click="register" v-if="!is_login">注册</button>
+                            </span>
+              <span v-if="is_login">您好，{{curr_user().get('username')}}</span>
+              <button @click="logout" v-if="is_login">注销</button>
+
+              <button @click="doGen" class="btn btn-danger" style="font-weight:bold;cursor:hand">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;&nbsp;Update Worksheet
+              </button>
+
+              <button @click="downPdf()" class="btn btn-success" style="font-weight:bold;cursor:pointer;">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>&nbsp;&nbsp;Download PDF
+              </button>
+
+              <button @click="printArea()" class="btn btn-success" style="font-weight:bold;cursor:pointer;">
+                <span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;&nbsp;Print
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div id="mycontent" class="math">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <thead>
+      <tr>
+        <th :colspan="cols" style="text-align:center;">
+          <div class="print-repeat" contenteditable="true">
+            <h3 style="margin-bottom: 15px">Kids Math Drills Generator</h3>
+            Name：________  Data：_______  score：________<br/><br/>
+          </div>
+        </th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <!-- 大表格一行就是一页 -->
+      <tr :class="{break_before:p>1}"  v-for="p in parseInt(((parseInt(res.length + (cols-0) - 1) / (cols-0)) + (pagerows - 1)) / (pagerows - 0)) ">
+        <td style="border: 0 solid;">
+          <!-- 小表格是当前页的所有试题 -->
+          <table :style="{fontFamily:fontfamily, fontSize:fontsize+'px'}" width="100%" :cellPadding="cellPadding" :cellSpacing="cellSpacing">
+            <tr
+              v-for="r in (appendemptyrows ? (pagerows - 0) : Math.min(pagerows, parseInt((res.length - (p - 1) * (pagerows-0) * (cols-0) + (cols - 1)) / (cols-0))))"
+              :class="{printonly: r > parseInt((res.length - (p - 1) * (pagerows-0) * (cols-0) + (cols - 1)) / (cols-0))}">
+              <td :style="{padding:cellSpacing+'px '+cellPadding+'px'}" v-for="c in (cols-0)">
+                <template v-if="r > parseInt((res.length - (p - 1) * (pagerows-0) * (cols-0) + (cols - 1)) / (cols-0))">
+                </template>
+                <template v-if="(p-1) * (pagerows-0) * (cols-0) + (r-1) * (cols-0) + (c - 1) < res.length">
+                <span>{{formulaToString(res[(p - 1) * (pagerows - 0) * (cols - 0) + (r - 1) * (cols - 0) + (c - 1)].li)}}</span>
+                </template>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <div class="panel panel-primary py-32 overflow-hidden" style="background: #e5e7eb80; margin-top: 30px">
+      <h2 class="text-5xl text-center font-extrabold"> Our advantages </h2>
+
+      <h3 style="font-family:monospace,monospace, serif; font-size: 22px; text-align: left; line-height: 1.5; padding: 15px">
+        Our math drills worksheets are the best way to improve your math skills!
+        These math drills are designed to help students master essential math concepts,
+        and they are the best math drills on the internet.
+        Whether you are a student looking to improve your grades,
+        or a teacher looking for a fun and effective way to teach math,
+        these worksheets are sure to be a hit. Best of all,
+        they are completely free to use!
+        With our math drills worksheets,
+        you can practice your math skills anytime,
+        anywhere. So don't wait,
+        start improving your math skills today with our free math drills worksheets,
+        including addition drills, subtraction drills, multiplication drills, and division drills and more.
+      </h3>
+    </div>
+
+    <div class="panel panel-primary py-32 overflow-hidden" style="background: #e5e7eb80">
+      <h3 class="text-5xl text-center font-extrabold">Supporting Student Learning with Free Math Worksheets</h3>
+
+      <h3 style="font-family:monospace,monospace, serif; font-size: 22px; text-align: left; line-height: 1.5; padding: 15px">
+        Kids Math believes that education should be accessible to all children despite their socioeconomic situation or any other factors.
+        All the math worksheets on math drills have been free-to-use with students learning math.
+        Our website works well on any device and worksheets can be printed or used on a screen.
+      </h3>
+    </div>
+
+        <div class="hidden panel panel-primary" style="align-items: center">
+            <h3 style="font-family: 'Arial', sans-serif">Supporting Student Learning with Free Math Worksheets</h3>
+            <h3 class="top-1 p0">Supporting Student Learning with Free Math Worksheets</h3>
+
+            <h3 style="font-family: '仿宋', FangSong, serif; font-size: x-large; text-align: start;padding-left: 50px; padding-right: 50px">
+              Kids Math believes that education should be accessible to all children despite their socioeconomic situation or any other factors.
+              All the math worksheets on math drills have been free-to-use with students learning math.
+              Our website works well on any device and worksheets can be printed or used on a screen.
+            </h3>
+
+            <h3  style="font-family: '仿宋', FangSong, serif; font-size: x-large; text-align: start;padding-left: 50px; padding-right: 50px">
+              Math Exercises worksheets are also used in special education, adult education, tutoring, colleges, high schools, prisons and a variety of other situations.
+              Special education teachers especially like that we break down math skills and provide large-print options.
+              Adult learners appreciate the simple uncluttered format that our worksheets offer. Tutors use our math worksheets to reduce their costs and focus on student learning.
+              High school, college and university educators sometimes need remedial resources for students to allow them to continue with more advanced topics.</h3>
+
+          <h3  style="font-family: '仿宋', FangSong, serif; font-size: x-large; text-align: start;padding-left: 50px; padding-right: 50px">
+            Teachers and parents can create custom assignments that assess or review particular math skills. Activities are tailored so pupils work at appropriate grade levels.
+            Worksheets can be downloaded and printed for classroom use, or activities can be completed and automatically graded online.
+          </h3>
+        </div>
+  </div>
+  <!--==============================footer=================================-->
+  <footer style=" width:100%; background: #000000">
+    <p>© 2025 Kids Math</p>
+    <p><a rel="nofollow" href="http//templatemonster.com/" target="_blank" class="link">Website Template</a> by TemplateMonster.com | <a rel="nofollow" href="http//www.html5xcss3.com">html5xcss3.com</a></p>
+  </footer>
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/math.js"></script>
+</div>
+</body>
+</html>
