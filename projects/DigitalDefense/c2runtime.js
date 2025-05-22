@@ -1600,10 +1600,12 @@ function lc(k, g, a, c) {
       this.nf && (window.ondragover = function (l) {
         l.preventDefault();
         return !1
-      }, window.ondrop = function (l) {
-        l.preventDefault();
-        return !1
-      }, require("nw.gui").App.clearCache());
+      });
+      // , window.ondrop = function (l) {
+      //   l.preventDefault();
+      //   return !1
+      // }, require("nw.gui").App.clearCache());
+
       this.zk && "undefined" !==
       typeof jQuery && jQuery("canvas").parents("*").css("overflow", "visible");
       this.width = l.width;
