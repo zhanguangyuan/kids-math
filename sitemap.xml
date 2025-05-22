@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.kids-math.cn/</loc>
+  <lastmod>2025-05-22T10:00:06+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/index.html</loc>
+  <lastmod>2025-05-22T10:00:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/files/math.html</loc>
+  <lastmod>2025-05-22T10:00:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/files/exercises.html</loc>
+  <lastmod>2025-05-22T10:00:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/files/games.html</loc>
+  <lastmod>2025-05-22T10:00:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/files/about.html</loc>
+  <lastmod>2025-05-22T10:00:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/projects/2048/index.html</loc>
+  <lastmod>2025-05-22T10:00:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/projects/HexaMatch/index.html</loc>
+  <lastmod>2025-05-22T10:00:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/projects/Merge_Numbers/index.html</loc>
+  <lastmod>2025-05-22T10:00:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/projects/quickCalc/index.html</loc>
+  <lastmod>2025-05-22T10:00:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/projects/get36/index.html</loc>
+  <lastmod>2025-05-22T10:00:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/projects/mathTest/index.html</loc>
+  <lastmod>2025-05-22T10:00:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.kids-math.cn/projects/DigitalDefense/game.html</loc>
+  <lastmod>2025-05-22T10:00:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
