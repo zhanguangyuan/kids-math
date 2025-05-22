@@ -1,5 +1,7 @@
-@import "helpers";
-@import "fonts/clear-sans.css";
+//@import "./helpers";
+//@import "./fonts/clear-sans.css";
+@import url("./helpers.scss");
+@import url("./fonts/clear-sans.css");
 
 $field-width: 500px;
 $grid-spacing: 15px;
