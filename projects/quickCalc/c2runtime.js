@@ -1501,10 +1501,11 @@ function jc(n, l, h, t) {
       this.be && (window.ondragover = function (e) {
         e.preventDefault();
         return !1
-      }, window.ondrop = function (e) {
-        e.preventDefault();
-        return !1
-      }, require("nw.gui").App.clearCache());
+      });
+      //   window.ondrop = function (e) {
+      //   e.preventDefault();
+      //   return !1
+      // }, require("nw.gui").App.clearCache());
       this.bi && "undefined" !== typeof jQuery && jQuery("canvas").parents("*").css("overflow", "visible");
       this.width = a.width;
       this.height = a.height;
